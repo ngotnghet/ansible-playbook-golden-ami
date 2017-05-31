@@ -1,1 +1,13 @@
----
+- hosts: galaxyservers
+  pre_tasks:
+    - name: Install Dependencies
+      yum:
+        name: "{{ item }}"
+      become: yes
+      with_items:
+        - curl
+  vars:
+    gitlab_external_url: https://192.168.33.9/
+  roles:
+    - { role: ansible-role-gitlab, become: yes }
+

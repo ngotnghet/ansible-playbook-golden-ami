@@ -1,7 +1,2 @@
-[webservers]
-web3
-
-[dbservers]
-web2
-
-
+[galaxyservers]
+192.168.33.9 ansible_ssh_user=vagrant
